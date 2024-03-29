@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;dominio.Entradas.java&apos; to &apos;Entrada.java&apos;&#x0D;&#x0A;- Original project: &apos;TP1_L5_GRUPO_6_1&apos;&#x0D;&#x0A;- Original element: &apos;dominio.Entradas.java&apos;&#x0D;&#x0A;- Renamed element: &apos;dominio.Entrada.java&apos;" description="Rename compilation unit &apos;Entradas.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;dominio{Entradas.java" name="Entrada.java" references="false" stamp="1711671702223" version="1.0"/>
+</session>
