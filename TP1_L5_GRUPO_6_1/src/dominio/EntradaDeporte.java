@@ -14,7 +14,7 @@ public class EntradaDeporte extends Entrada {
 		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
-		setCosto(calcularCosto());
+		calcularCosto();
 	}
 
 	public boolean isEsInternacional() {
