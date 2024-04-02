@@ -61,9 +61,9 @@ public class Teatro extends Entrada{
 	
 	@Override
 	public String toString() {
-		return "Teatro [genero=" + genero + ", actorPrincipal1=" + actorPrincipal1 + ", actorPrincipal2=" + actorPrincipal2 + ", actorPrincipal3=" + actorPrincipal3 + ", getNumeroUnico()="
-	            + getNumeroUnico() + ", getNombreShow()=" + getNombreShow() + ", getDia()=" + getDia() + ", getHora()="
-				+ getHora() + ", getTiempoDuracion()=" + getTiempoDuracion() + ", getCosto()=" + getCosto() + "]";
+		return "Entrada de Teatro [GENERO:" + genero + ", ACTOR PRINCIPAL 1:" + actorPrincipal1 + ", ACTOR PRINCIPAL 2:" + actorPrincipal2 + ",ACTOR PRINCIPAL 3:" + actorPrincipal3 + ", NUMERO ENTRADA:"
+	            + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
+				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 	 
 	

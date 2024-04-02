@@ -70,8 +70,9 @@ public class Recital extends Entrada {
 
 	@Override
 	public String toString() {
-		return "Recital [banda=" + banda + ", genero=" + genero + ", bandaSoporte1=" + bandaSoporte1 + ", bandaSoporte2=" + bandaSoporte2 + ", esVip=" + esVip + ", getNumeroUnico()="
-	            + getNumeroUnico() + ", getNombreShow()=" + getNombreShow() + ", getDia()=" + getDia() + ", getHora()="
-				+ getHora() + ", getTiempoDuracion()=" + getTiempoDuracion() + ", getCosto()=" + getCosto() + "]";
+		return "Entradas de Recitales [BANDA PRINCIPAL:" + banda + ", GENERO:" + genero + ", BANDA SOPORTE 1:" +
+	bandaSoporte1 + ", BANDA SOPORTE 2:" + bandaSoporte2 + ", VIP:" + esVip + ", NUMERO ENTRADA:"
+	            + getNumeroUnico() + ", NOMBRE DEL SHOW=" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
+				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 }

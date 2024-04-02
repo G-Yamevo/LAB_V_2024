@@ -55,9 +55,9 @@ public class EntradaDeporte extends Entrada {
 
 	@Override
 	public String toString() {
-		return "EntradaDeporte [esInternacional=" + esInternacional + ", deporte=" + deporte + ", getNumeroUnico()="
-				+ getNumeroUnico() + ", getNombreShow()=" + getNombreShow() + ", getDia()=" + getDia() + ", getHora()="
-				+ getHora() + ", getTiempoDuracion()=" + getTiempoDuracion() + ", getCosto()=" + getCosto() + "]";
+		return "Entrada de Deportes [INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + ", NUMERO ENTRADA:"
+				+ getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
+				+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 	
 }
