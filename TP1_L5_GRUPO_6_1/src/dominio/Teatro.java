@@ -59,6 +59,12 @@ public class Teatro extends Entrada{
 	        return (float) 1350.50;
 	    }
 	
+	@Override
+	public String toString() {
+		return "Teatro [genero=" + genero + ", actorPrincipal1=" + actorPrincipal1 + ", actorPrincipal2=" + actorPrincipal2 + ", actorPrincipal3=" + actorPrincipal3 + ", getNumeroUnico()="
+	            + getNumeroUnico() + ", getNombreShow()=" + getNombreShow() + ", getDia()=" + getDia() + ", getHora()="
+				+ getHora() + ", getTiempoDuracion()=" + getTiempoDuracion() + ", getCosto()=" + getCosto() + "]";
+	}
 	 
 	
 }

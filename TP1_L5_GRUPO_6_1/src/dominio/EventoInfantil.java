@@ -39,6 +39,7 @@ public class EventoInfantil extends Entrada {
 
 	@Override
 	public String toString() {
-		return "EventoInfantil [souvenir=" + souvenir + ", menor=" + menor + "]";
+		return "EventoInfantil [souvenir=" + souvenir + ", menor=" + menor + ", getNumeroUnico()=" + getNumeroUnico() + ", getNombreShow()=" + getNombreShow() + ", getDia()=" + getDia() + ", getHora()="
+				+ getHora() + ", getTiempoDuracion()=" + getTiempoDuracion() + ", getCosto()=" + getCosto() + "]";
 	}
 }
