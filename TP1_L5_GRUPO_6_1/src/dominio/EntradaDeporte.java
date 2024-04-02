@@ -14,7 +14,7 @@ public class EntradaDeporte extends Entrada {
 		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
-		calcularCosto();
+		setCosto(calcularCosto());
 	}
 
 	public boolean isEsInternacional() {
@@ -33,31 +33,38 @@ public class EntradaDeporte extends Entrada {
 		this.deporte = deporte;
 	}
 
-	public void calcularCosto() {
-		switch (deporte.toLowerCase()) {
-		case "futbol":
-			this.costo = COSTO_FUTBOL;
-			break;
-		case "rugby":
-			this.costo = COSTO_RUGBY;
-			break;
-		case "hockey":
-			this.costo = COSTO_HOCKEY;
-			break;
-		default:
-			throw new IllegalArgumentException("Deporte no reconocido");
-		}
-
-		if (esInternacional) {
-			this.costo *= RECARGO_INTERNACIONAL;
-		}
-	}
 
 	@Override
 	public String toString() {
 		return "Entrada de Deportes [INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + ", NUMERO ENTRADA:"
 				+ getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
+	}
+	
+	//Metodo abstracto
+	@Override
+	public float calcularCosto() {
+		float precio = 0;
+		switch (deporte.toLowerCase()) {
+		case "futbol":
+			precio = COSTO_FUTBOL;
+			break;
+		case "rugby":
+			precio = COSTO_RUGBY;
+			break;
+		case "hockey":
+			precio = COSTO_HOCKEY;
+			break;
+		default:
+			throw new IllegalArgumentException("Deporte no reconocido");
+		}
+
+		if (esInternacional) {
+			precio *= RECARGO_INTERNACIONAL;
+		}
+		
+		return precio;
+		
 	}
 	
 }

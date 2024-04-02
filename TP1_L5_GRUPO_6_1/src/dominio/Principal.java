@@ -8,6 +8,7 @@ public class Principal {
 		Recital recital = new Recital(123, "Naranja Persa", "Lunes", "20:00", "2 horas", 800, "Los Piojos", "Rock",
 				"Los Guasones", "Tributo al rock", false);
 		System.out.println(recital.toString());
+		recital.mostrarGenero();
 		System.out.println("··················");
 		// Test de la clase EntradaDeporte
 		EntradaDeporte entradaDeporte = new EntradaDeporte(1, "Test futbol", "1", "23:39", "3 horas",  false,
@@ -21,7 +22,9 @@ public class Principal {
 		// Test para la entrada del Teatro
 		Teatro entradaTeatro = new Teatro (234, "FANTASMA DE LA OPERA", "Sabado", "22:00 hrs", "3 hs", (float) 1350.50, "Drama", "Ricardo Darin", "Guillermo Francella", "Erica Rivas");
 		System.out.println(entradaTeatro.toString());
+		entradaTeatro.mostrarGenero();
 		}
+		
 		
 		
 	}

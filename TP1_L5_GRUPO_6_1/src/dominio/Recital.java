@@ -1,6 +1,8 @@
 package dominio;
 
-public class Recital extends Entrada {
+import interfaces.IGenero;
+
+public class Recital extends Entrada implements IGenero{
 	private String banda;
 	private String genero;
 	private String bandaSoporte1;
@@ -59,7 +61,9 @@ public class Recital extends Entrada {
 	public void setVip(boolean esVip) {
 		this.esVip = esVip;
 	}
-
+	
+	//Metodo abstracto
+	@Override
 	public float calcularCosto() {
 		if (esVip) {
 			return VIP_COSTO;
@@ -74,5 +78,12 @@ public class Recital extends Entrada {
 	bandaSoporte1 + ", BANDA SOPORTE 2:" + bandaSoporte2 + ", VIP:" + esVip + ", NUMERO ENTRADA:"
 	            + getNumeroUnico() + ", NOMBRE DEL SHOW=" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
+	}
+
+	//Metodo interface
+	@Override
+	public void mostrarGenero() {
+		System.out.println("Genero del recital: " + getGenero());
+		
 	}
 }

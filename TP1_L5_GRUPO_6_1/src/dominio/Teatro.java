@@ -1,6 +1,8 @@
 package dominio;
 
-public class Teatro extends Entrada{
+import interfaces.IGenero;
+
+public class Teatro extends Entrada implements IGenero{
 
 	//atributos
 	
@@ -53,7 +55,8 @@ public class Teatro extends Entrada{
 	public void setActorPrincipal3(String actorPrincipal3) {
 		this.actorPrincipal3 = actorPrincipal3;
 	}
-
+	//Metodo abstracto
+	@Override
 	public float calcularCosto() {
 	    
 	        return (float) 1350.50;
@@ -64,6 +67,13 @@ public class Teatro extends Entrada{
 		return "Entrada de Teatro [GENERO:" + genero + ", ACTOR PRINCIPAL 1:" + actorPrincipal1 + ", ACTOR PRINCIPAL 2:" + actorPrincipal2 + ",ACTOR PRINCIPAL 3:" + actorPrincipal3 + ", NUMERO ENTRADA:"
 	            + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
+	}
+	
+	//Metodo Interface
+	@Override
+	public void mostrarGenero() {
+		System.out.println("Genero de la obra: " + getGenero());
+		
 	}
 	 
 	

@@ -64,5 +64,8 @@ public abstract class Entrada {
 		this.costo = costo;
 	}
 	
+	//Metodo abstracto
+	public abstract float calcularCosto();
+		
 	
 }

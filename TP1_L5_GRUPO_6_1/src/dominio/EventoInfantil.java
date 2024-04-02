@@ -29,6 +29,8 @@ public class EventoInfantil extends Entrada {
 		this.menor = menor;
 	}
 
+	//Metodo abstracto
+	@Override
 	public float calcularCosto() {
 		if (menor) {
 			return MENOR8_COSTO;
