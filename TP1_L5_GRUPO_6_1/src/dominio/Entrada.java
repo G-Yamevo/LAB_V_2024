@@ -10,16 +10,6 @@ public abstract class Entrada {
 	protected float costo;
 	
 	
-	public Entrada(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion, float costo) {
-		super();
-		this.numeroUnico = numeroUnico;
-		this.nombreShow = nombreShow;
-		this.dia = dia;
-		this.hora = hora;
-		this.tiempoDuracion = tiempoDuracion;
-		this.costo = costo;
-	}
-	
 	public Entrada(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion) {
 		this.numeroUnico = numeroUnico;
 		this.nombreShow = nombreShow;
@@ -59,9 +49,6 @@ public abstract class Entrada {
 	}
 	public float getCosto() {
 		return costo;
-	}
-	public void setCosto(float costo) {
-		this.costo = costo;
 	}
 	
 	//Metodo abstracto
