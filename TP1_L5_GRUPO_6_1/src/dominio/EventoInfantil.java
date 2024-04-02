@@ -8,7 +8,7 @@ public class EventoInfantil extends Entrada {
 	
 	public EventoInfantil(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion,
 			float costo, boolean souvenir, boolean menor) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion, costo);
+		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
 		this.souvenir = souvenir;
 		this.menor = menor;
 	}
