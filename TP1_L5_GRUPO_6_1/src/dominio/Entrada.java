@@ -7,7 +7,7 @@ public abstract class Entrada {
 	private String dia;
 	private String hora;
 	private String tiempoDuracion;
-	private float costo;
+	protected float costo;
 	
 	
 	public Entrada(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion, float costo) {
@@ -18,6 +18,14 @@ public abstract class Entrada {
 		this.hora = hora;
 		this.tiempoDuracion = tiempoDuracion;
 		this.costo = costo;
+	}
+	
+	public Entrada(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion) {
+		this.numeroUnico = numeroUnico;
+		this.nombreShow = nombreShow;
+		this.dia = dia;
+		this.hora = hora;
+		this.tiempoDuracion = tiempoDuracion;
 	}
 	public int getNumeroUnico() {
 		return numeroUnico;
