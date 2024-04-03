@@ -4,6 +4,7 @@ import interfaces.ImprimibleEnConsola;
 
 public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 
+
 	//atributos
 	
 	private String genero;
@@ -75,10 +76,12 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
     public String obtenerTipoEntrada() {
 		return "TEATRO";	
     }
+
 	
 	//Interface method
 	@Override
 	public void imprimirEnConsola() {
 		System.out.println(this.toString());
 	}
+
 }
