@@ -1,6 +1,8 @@
 package dominio;
 
-public class EntradaDeporte extends Entrada{
+import interfaces.ImprimibleEnConsola;
+
+public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 	private static final float RECARGO_INTERNACIONAL = (float) 1.3;
 	private static final float COSTO_FUTBOL = 300;
 	private static final float COSTO_RUGBY = 450;
@@ -66,9 +68,15 @@ public class EntradaDeporte extends Entrada{
 		
 	}
 	
-	//Interface method
 	@Override
     public String obtenerTipoEntrada() {
 		return "DEPORTE";	
     }
+	
+	// Interface method
+	@Override
+	public void imprimirEnConsola() {
+		System.out.println(this.toString());
+		
+	}
 }
