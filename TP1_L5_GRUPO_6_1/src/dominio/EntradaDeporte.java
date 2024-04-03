@@ -9,9 +9,9 @@ public class EntradaDeporte extends Entrada{
 	private boolean esInternacional;
 	private String deporte;
 
-	public EntradaDeporte(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion,
+	public EntradaDeporte(String nombreShow, String dia, String hora, String tiempoDuracion,
 		 boolean esInternacional, String deporte) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, dia, hora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
 		this.costo = calcularCosto();
@@ -35,9 +35,9 @@ public class EntradaDeporte extends Entrada{
 
 	@Override
 	public String toString() {
-		return "Entrada de " + obtenerTipoEntrada() + ", INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + ", NUMERO ENTRADA:"
-				+ getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
-				+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
+		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", ES INTERNACIONAL: " 
+	+ ObtenerSiNo(esInternacional) + ", DEPORTE: " + deporte + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() 
+	+ ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 	
 	//Metodo abstracto
@@ -69,6 +69,6 @@ public class EntradaDeporte extends Entrada{
 	//Interface method
 	@Override
     public String obtenerTipoEntrada() {
-		return "Deporte";	
+		return "DEPORTE";	
     }
 }

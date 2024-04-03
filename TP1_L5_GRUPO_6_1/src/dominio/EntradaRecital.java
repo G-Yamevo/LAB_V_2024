@@ -9,9 +9,9 @@ public class EntradaRecital extends Entrada{
 	private static final float NOVIP_COSTO = 800;
 	private static final float VIP_COSTO = 1500;
 
-	public EntradaRecital(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion,
+	public EntradaRecital(String nombreShow, String dia, String hora, String tiempoDuracion,
 			String banda, String genero, String bandaSoporte1, String bandaSoporte2, boolean esVip) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, dia, hora, tiempoDuracion);
 		this.banda = banda;
 		this.genero = genero;
 		this.bandaSoporte1 = bandaSoporte1;
@@ -71,16 +71,16 @@ public class EntradaRecital extends Entrada{
 	}
 	@Override
 	public String toString() {
-		return "Entrada de " + obtenerTipoEntrada() + ", BANDA PRINCIPAL:" + banda + ", GENERO:" + genero + ", BANDA SOPORTE 1:" +
-	bandaSoporte1 + ", BANDA SOPORTE 2:" + bandaSoporte2 + ", VIP:" + esVip + ", NUMERO ENTRADA:"
-	            + getNumeroUnico() + ", NOMBRE DEL SHOW=" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
-				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
+		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", BANDA PRINCIPAL: " 
+	+ banda + ", GENERO: " + genero + ", BANDA SOPORTE 1: " + bandaSoporte1 + ", BANDA SOPORTE 2: " + bandaSoporte2 
+	+ ", VIP: " + ObtenerSiNo(esVip) + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() + ", HORARIO: " + getHora() 
+	+ ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 
 	//Metodo interface
 	@Override
     public String obtenerTipoEntrada() {
-		return "Recital";	
+		return "RECITAL";	
     }
 }
 
