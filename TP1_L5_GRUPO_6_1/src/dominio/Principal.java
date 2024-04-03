@@ -3,7 +3,7 @@ package dominio;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Impresiones por pantalla
 		System.out.println("··················");
 		EntradaRecital recital = new EntradaRecital(123, "Naranja Persa", "Lunes", "20:00", "2 horas", "Los Piojos", "Rock",
 				"Los Guasones", "Tributo al rock", false);
@@ -11,11 +11,11 @@ public class Principal {
 		recital.mostrarGenero();
 		System.out.println("··················");
 		// Test de la clase EntradaDeporte
-		EntradaDeporte entradaDeporte = new EntradaDeporte(1, "Test futbol", "1", "23:39", "3 horas", false, "Futbol");
+		Entrada entradaDeporte = new EntradaDeporte(1, "Test futbol", "1", "23:39", "3 horas", false, "Futbol");
 		System.out.println(entradaDeporte.toString());
 		System.out.println("··················");
 		// Test para la entrada del Evento Infantil
-		EntradaInfantil entradaInfantil = new EntradaInfantil(234, "Panam", "Viernes", "20:00 hrs", "2 hs", true, true);
+		Entrada entradaInfantil = new EntradaInfantil(234, "Panam", "Viernes", "20:00 hrs", "2 hs", true, true);
 		System.out.println(entradaInfantil.toString());
 		System.out.println("··················");
 		// Test para la entrada del EntradaTeatro
