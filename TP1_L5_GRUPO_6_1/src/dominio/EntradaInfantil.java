@@ -43,7 +43,7 @@ public class EntradaInfantil extends Entrada implements ImprimibleEnConsola{
 
 	@Override
 	public String toString() {
-		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", TIPO ENTRADA: " + obtenerTipoEntrada() + ", SOUVENIR: " 
+		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", SOUVENIR: " 
 	+ souvenir + ", ES MENOR: " + ObtenerSiNo(menor) + ", NOMBRE DEL SHOW: " + getNombreShow()  + ", DIA: " + getDia() + ", HORARIO: " 
 	+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
@@ -51,7 +51,7 @@ public class EntradaInfantil extends Entrada implements ImprimibleEnConsola{
 	
 	@Override
     public String obtenerTipoEntrada() {
-		return "EVENTO INFANTIL";	
+		return "INFANTIL";	
     }
 	
 	//Interface method
