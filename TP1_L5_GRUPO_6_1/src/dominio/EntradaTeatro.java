@@ -1,6 +1,8 @@
 package dominio;
 
-public class EntradaTeatro extends Entrada{
+import interfaces.ImprimibleEnConsola;
+
+public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 
 	//atributos
 	
@@ -68,9 +70,15 @@ public class EntradaTeatro extends Entrada{
 	+ ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 	
-	//Interface method
+	
 	@Override
     public String obtenerTipoEntrada() {
 		return "TEATRO";	
-    }	
+    }
+	
+	//Interface method
+	@Override
+	public void imprimirEnConsola() {
+		System.out.println(this.toString());
+	}
 }

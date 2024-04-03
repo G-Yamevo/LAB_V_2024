@@ -1,6 +1,8 @@
 package dominio;
 
-public class EntradaInfantil extends Entrada{
+import interfaces.ImprimibleEnConsola;
+
+public class EntradaInfantil extends Entrada implements ImprimibleEnConsola{
 	private boolean souvenir;
 	private boolean menor;
 	private static final float MENOR8_COSTO = 250;
@@ -46,9 +48,15 @@ public class EntradaInfantil extends Entrada{
 	+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 	
-	//Interface method
+	
 	@Override
     public String obtenerTipoEntrada() {
 		return "EVENTO INFANTIL";	
     }
+	
+	//Interface method
+	@Override
+	public void imprimirEnConsola() {
+		System.out.println(this.toString());
+	}
 }

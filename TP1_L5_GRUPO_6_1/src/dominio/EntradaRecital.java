@@ -1,6 +1,8 @@
 package dominio;
 
-public class EntradaRecital extends Entrada{
+import interfaces.ImprimibleEnConsola;
+
+public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 	private String banda;
 	private String genero;
 	private String bandaSoporte1;
@@ -77,10 +79,16 @@ public class EntradaRecital extends Entrada{
 	+ ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 
-	//Metodo interface
+	
 	@Override
     public String obtenerTipoEntrada() {
 		return "RECITAL";	
     }
+	
+	//Metodo interface
+	@Override
+	public void imprimirEnConsola() {
+		System.out.println(this.toString());
+	}
 }
 
