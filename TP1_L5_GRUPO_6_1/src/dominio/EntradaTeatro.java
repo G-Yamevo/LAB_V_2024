@@ -1,8 +1,6 @@
 package dominio;
 
-import interfaces.IGenero;
-
-public class EntradaTeatro extends Entrada implements IGenero{
+public class EntradaTeatro extends Entrada{
 
 	//atributos
 	
@@ -64,17 +62,14 @@ public class EntradaTeatro extends Entrada implements IGenero{
 	
 	@Override
 	public String toString() {
-		return "Entrada de EntradaTeatro [GENERO:" + genero + ", ACTOR PRINCIPAL 1:" + actorPrincipal1 + ", ACTOR PRINCIPAL 2:" + actorPrincipal2 + ",ACTOR PRINCIPAL 3:" + actorPrincipal3 + ", NUMERO ENTRADA:"
+		return "Entrada de " + obtenerTipoEntrada() + ", GENERO:" + genero + ", ACTOR PRINCIPAL 1:" + actorPrincipal1 + ", ACTOR PRINCIPAL 2:" + actorPrincipal2 + ",ACTOR PRINCIPAL 3:" + actorPrincipal3 + ", NUMERO ENTRADA:"
 	            + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 	
-	//Metodo Interface
+	//Interface method
 	@Override
-	public void mostrarGenero() {
-		System.out.println("Genero de la obra: " + getGenero());
-		
-	}
-	 
-	
+    public String obtenerTipoEntrada() {
+		return "Teatro";	
+    }	
 }

@@ -51,8 +51,8 @@ public abstract class Entrada {
 		return costo;
 	}
 	
-	//Metodo abstracto
-	public abstract float calcularCosto();
-		
+	//Metodos abstractos
+	public abstract float calcularCosto();	
 	
+	public abstract String obtenerTipoEntrada();
 }

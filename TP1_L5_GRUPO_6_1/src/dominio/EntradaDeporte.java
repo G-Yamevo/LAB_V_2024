@@ -1,6 +1,6 @@
 package dominio;
 
-public class EntradaDeporte extends Entrada {
+public class EntradaDeporte extends Entrada{
 	private static final float RECARGO_INTERNACIONAL = (float) 1.3;
 	private static final float COSTO_FUTBOL = 300;
 	private static final float COSTO_RUGBY = 450;
@@ -33,10 +33,9 @@ public class EntradaDeporte extends Entrada {
 		this.deporte = deporte;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Entrada de Deportes [INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + ", NUMERO ENTRADA:"
+		return "Entrada de " + obtenerTipoEntrada() + ", INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + ", NUMERO ENTRADA:"
 				+ getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
@@ -67,4 +66,9 @@ public class EntradaDeporte extends Entrada {
 		
 	}
 	
+	//Interface method
+	@Override
+    public String obtenerTipoEntrada() {
+		return "Deporte";	
+    }
 }

@@ -1,8 +1,6 @@
 package dominio;
 
-import interfaces.IGenero;
-
-public class EntradaRecital extends Entrada implements IGenero{
+public class EntradaRecital extends Entrada{
 	private String banda;
 	private String genero;
 	private String bandaSoporte1;
@@ -71,10 +69,9 @@ public class EntradaRecital extends Entrada implements IGenero{
 			return NOVIP_COSTO;
 		}
 	}
-
 	@Override
 	public String toString() {
-		return "Entradas de Recitales [BANDA PRINCIPAL:" + banda + ", GENERO:" + genero + ", BANDA SOPORTE 1:" +
+		return "Entrada de " + obtenerTipoEntrada() + ", BANDA PRINCIPAL:" + banda + ", GENERO:" + genero + ", BANDA SOPORTE 1:" +
 	bandaSoporte1 + ", BANDA SOPORTE 2:" + bandaSoporte2 + ", VIP:" + esVip + ", NUMERO ENTRADA:"
 	            + getNumeroUnico() + ", NOMBRE DEL SHOW=" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
@@ -82,8 +79,8 @@ public class EntradaRecital extends Entrada implements IGenero{
 
 	//Metodo interface
 	@Override
-	public void mostrarGenero() {
-		System.out.println("Genero del recital: " + getGenero());
-		
-	}
+    public String obtenerTipoEntrada() {
+		return "Recital";	
+    }
 }
+

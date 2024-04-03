@@ -1,6 +1,6 @@
 package dominio;
 
-public class EntradaInfantil extends Entrada {
+public class EntradaInfantil extends Entrada{
 	private boolean souvenir;
 	private boolean menor;
 	private static final float MENOR8_COSTO = 250;
@@ -41,7 +41,13 @@ public class EntradaInfantil extends Entrada {
 
 	@Override
 	public String toString() {
-		return "Evento Infantil [SOUVENIR:" + souvenir + ", MENOR:" + menor + ", NUMERO ENTRADA:" + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ",DIA:" + getDia() + ", HORARIO:"
+		return "Entrada de " + obtenerTipoEntrada() + ", SOUVENIR:" + souvenir + ", MENOR:" + menor + ", NUMERO ENTRADA:" + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ",DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
+	
+	//Interface method
+	@Override
+    public String obtenerTipoEntrada() {
+		return "Evento Infantil";	
+    }
 }
