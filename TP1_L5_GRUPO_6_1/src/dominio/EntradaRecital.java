@@ -4,16 +4,16 @@ import interfaces.ImprimibleEnConsola;
 
 
 public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
-	private String banda;
-	private Generos genero;
-	private String bandaSoporte1;
-	private String bandaSoporte2;
+	private BandaRecitales banda;
+	private Genero genero;
+	private BandaRecitales bandaSoporte1;
+	private BandaRecitales bandaSoporte2;
 	private boolean esVip;
 	private static final float NOVIP_COSTO = 800;
 	private static final float VIP_COSTO = 1500;
 
 	public EntradaRecital(String nombreShow, String dia, String hora, String tiempoDuracion,
-			String banda, Generos genero, String bandaSoporte1, String bandaSoporte2, boolean esVip) {
+			BandaRecitales banda, Genero genero, BandaRecitales bandaSoporte1, BandaRecitales bandaSoporte2, boolean esVip) {
 		super(nombreShow, dia, hora, tiempoDuracion);
 		this.banda = banda;
 		this.genero = genero;
@@ -23,35 +23,35 @@ public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 		this.costo = calcularCosto();
 	}
 
-	public String getBanda() {
+	public BandaRecitales getBanda() {
 		return banda;
 	}
 
-	public void setBanda(String banda) {
+	public void setBanda(BandaRecitales banda) {
 		this.banda = banda;
 	}
 
-	public Generos getGenero() {
+	public Genero getGenero() {
 		return genero;
 	}
 
-	public void setGenero(Generos genero) {
+	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 
-	public String getBandaSoporte1() {
+	public BandaRecitales getBandaSoporte1() {
 		return bandaSoporte1;
 	}
 
-	public void setBandaSoporte1(String bandaSoporte1) {
+	public void setBandaSoporte1(BandaRecitales bandaSoporte1) {
 		this.bandaSoporte1 = bandaSoporte1;
 	}
 
-	public String getBandaSoporte2() {
+	public BandaRecitales getBandaSoporte2() {
 		return bandaSoporte2;
 	}
 
-	public void setBandaSoporte2(String bandaSoporte2) {
+	public void setBandaSoporte2(BandaRecitales bandaSoporte2) {
 		this.bandaSoporte2 = bandaSoporte2;
 	}
 
@@ -75,7 +75,7 @@ public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 	@Override
 	public String toString() {
 		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", BANDA PRINCIPAL: " 
-	+ banda + ", GENERO: " + genero + ", BANDA SOPORTE 1: " + bandaSoporte1 + ", BANDA SOPORTE 2: " + bandaSoporte2 
+	+ banda.toString() + ", GENERO: " + genero + ", BANDA SOPORTE 1: " + bandaSoporte1.toString() + ", BANDA SOPORTE 2: " + bandaSoporte2.toString() 
 	+ ", VIP: " + ObtenerSiNo(esVip) + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() + ", HORARIO: " + getHora() 
 	+ ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}

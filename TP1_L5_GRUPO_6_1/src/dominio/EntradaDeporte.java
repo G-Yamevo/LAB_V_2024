@@ -9,10 +9,10 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 	private static final float COSTO_HOCKEY = 380;
 
 	private boolean esInternacional;
-	private String deporte;
+	private Deporte deporte;
 
 	public EntradaDeporte(String nombreShow, String dia, String hora, String tiempoDuracion,
-		 boolean esInternacional, String deporte) {
+		 boolean esInternacional, Deporte deporte) {
 		super(nombreShow, dia, hora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
@@ -27,18 +27,18 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 		this.esInternacional = esInternacional;
 	}
 
-	public String getDeporte() {
+	public Deporte getDeporte() {
 		return deporte;
 	}
 
-	public void setDeporte(String deporte) {
+	public void setDeporte(Deporte deporte) {
 		this.deporte = deporte;
 	}
 
 	@Override
 	public String toString() {
 		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", ES INTERNACIONAL: " 
-	+ ObtenerSiNo(esInternacional) + ", DEPORTE: " + deporte + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() 
+	+ ObtenerSiNo(esInternacional) + ", DEPORTE: " + deporte.toString() + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() 
 	+ ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 	
@@ -46,7 +46,7 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 	@Override
 	public float calcularCosto() {
 		float precio = 0;
-		switch (deporte.toLowerCase()) {
+		switch (this.getDeporte().getNombreDeporte().toLowerCase()) {
 		case "futbol":
 			precio = COSTO_FUTBOL;
 			break;

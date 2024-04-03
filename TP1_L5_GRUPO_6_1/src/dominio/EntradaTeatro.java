@@ -7,14 +7,14 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 
 	//atributos
 	
-	private Generos genero;
+	private Genero genero;
 	private String actorPrincipal1;
 	private String actorPrincipal2;
 	private String actorPrincipal3;
 	
 	//Constructor
 	public EntradaTeatro(String nombreShow, String dia, String hora, String tiempoDuracion, 
-			Generos genero, String actorPrincipal1, String actorPrincipal2,String actorPrincipal3) {
+			Genero genero, String actorPrincipal1, String actorPrincipal2,String actorPrincipal3) {
 		super(nombreShow, dia, hora, tiempoDuracion);
 		this.genero = genero;
 		this.actorPrincipal1 = actorPrincipal1;
@@ -25,11 +25,11 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 	
 //Getters and Setters
 	
-  public Generos getGenero() {
+  public Genero getGenero() {
 		return genero;
 	}
 
-	public void setGenero(Generos genero) {
+	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 
@@ -73,7 +73,7 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 	
 	
 	@Override
-    public String obtenerTipoEntrada() {
+	public String obtenerTipoEntrada() {
 		return "TEATRO";	
     }
 

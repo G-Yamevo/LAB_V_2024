@@ -1,59 +1,59 @@
 package dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import interfaces.ImprimibleEnConsola;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		
-		Generos[] generoRecital = new Generos[6];
-		generoRecital[0] = new Generos("Rock");  //1
-		generoRecital[0] = new Generos("Heavy Metal"); //2
-		generoRecital[0] = new Generos("Reggaeton"); //3
-		generoRecital[0] = new Generos("Trap"); //4
-		generoRecital[0] = new Generos("Latinos"); //5
-		generoRecital[0] = new Generos("Pop");//6
+		List<Genero> generosRecitales = new ArrayList<>();
+		generosRecitales.add(new Genero("Rock"));
+		generosRecitales.add(new Genero("Heavy Metal"));
+		generosRecitales.add(new Genero("Reggaeton"));
+		generosRecitales.add(new Genero("Trap"));
+		generosRecitales.add(new Genero("Latinos"));
+		generosRecitales.add(new Genero("Pop"));
 		
-		Generos[] generoTeatro = new Generos[3];
-		generoTeatro[0] = new Generos("Drama"); //1
-		generoTeatro[1] = new Generos("Teatro"); //2
-		generoTeatro[2] = new Generos("Comedia"); //3
+		List<Genero> generosTeatro = new ArrayList<>();
+		generosTeatro.add(new Genero("Drama"));
+		generosTeatro.add(new Genero("Teatro"));
+		generosTeatro.add(new Genero("Comedia"));
 		
+		List<Deporte> deportes = new ArrayList<>();
+		deportes.add(new Deporte("Futbol"));
+		deportes.add(new Deporte("Hockey"));
+		deportes.add(new Deporte("Rugby"));
 		
-		//Declaracion de las clases
-		ImprimibleEnConsola entradaRecital = new EntradaRecital("Naranja Persa", "Lunes", "20:00", "2 horas",
-				"Los Piojos", generoRecital[0], "Los Guasones", "Tributo al rock", false);
-		ImprimibleEnConsola recitalVip = new EntradaRecital("Lollapalooza", "Sabado", "19:00", "4 horas", "Miranda", generoRecital[5],
-				"Él Mató a un Policía Motorizado", "La Renga", true);
+		List<BandaRecitales> bandas = new ArrayList<>();
+		bandas.add(new BandaRecitales("Los Piojos"));
+		bandas.add(new BandaRecitales("Miranda"));
 		
-		ImprimibleEnConsola entradaFutbol = new EntradaDeporte("Test futbol", "1", "23:39", "3 horas", false,"Futbol");
-		ImprimibleEnConsola entradaRugby = new EntradaDeporte("Pumas vs Inglaterra", "24/07/2024", "19:35", "2 horas", true, "Rugby");
-		ImprimibleEnConsola entradaHockey = new EntradaDeporte("Las leonas vs España", "05/9/2024", "15:20", "2 horas", true, "Hockey");
+		List<BandaRecitales> bandasSoporte = new ArrayList<>();
+		bandasSoporte.add(new BandaRecitales("Los Piojos"));
+		bandasSoporte.add(new BandaRecitales("Miranda"));
+		bandasSoporte.add(new BandaRecitales("Los Piojos"));
+		bandasSoporte.add(new BandaRecitales("Miranda"));
 		
-		ImprimibleEnConsola entradaInfantil = new EntradaInfantil("Panam", "Viernes", "20:00 hrs", "2 hs", true, true);
-		ImprimibleEnConsola entradaInfantil2 = new EntradaInfantil( "Piñon Fijo", "Domingo", "18:00 hrs", "3 hs", false, false);
+		List<ImprimibleEnConsola> entradas = new ArrayList<>();
+		entradas.add(new EntradaRecital("Naranja Persa", "Lunes", "20:00", "2 horas", bandas.get(0),
+				generosRecitales.get(0), bandasSoporte.get(0), bandasSoporte.get(1), false));
+		entradas.add(new EntradaRecital("Lollapalooza", "Sabado", "19:00", "4 horas", bandas.get(1),
+				generosRecitales.get(5), bandasSoporte.get(2), bandasSoporte.get(3), true));
+		entradas.add(new EntradaDeporte("Test futbol", "1", "23:39", "3 horas", false, deportes.get(0)));
+		entradas.add(
+				new EntradaDeporte("Pumas vs Inglaterra", "24/07/2024", "19:35", "2 horas", true, deportes.get(1)));
+		entradas.add(
+				new EntradaDeporte("Las leonas vs España", "05/9/2024", "15:20", "2 horas", true, deportes.get(2)));
+		entradas.add(new EntradaInfantil("Panam", "Viernes", "20:00 hrs", "2 hs", true, true));
+		entradas.add(new EntradaInfantil("Piñon Fijo", "Domingo", "18:00 hrs", "3 hs", false, false));
+		entradas.add(new EntradaTeatro("FANTASMA DE LA OPERA", "Sabado", "22:00 hrs", "3 hs", generosTeatro.get(1),
+				"Ricardo Darin", "Guillermo Francella", "Erica Rivas"));
 		
-		ImprimibleEnConsola entradaTeatro = new EntradaTeatro("FANTASMA DE LA OPERA", "Sabado", "22:00 hrs", "3 hs",
-				generoTeatro[1], "Ricardo Darin", "Guillermo Francella", "Erica Rivas");
-		
-		
-		
-		// Impresiones por pantalla
-		System.out.println("··················");
-		entradaRecital.imprimirEnConsola();
-		System.out.println("\t");
-		recitalVip.imprimirEnConsola();
-		System.out.println("··················");
-		entradaFutbol.imprimirEnConsola();
-		System.out.println("\t");
-		entradaRugby.imprimirEnConsola();
-		System.out.println("\t");
-		entradaHockey.imprimirEnConsola();
-		System.out.println("··················");
-		entradaInfantil.imprimirEnConsola();
-		System.out.println("\t");
-		entradaInfantil2.imprimirEnConsola();
-		System.out.println("\t");
-		entradaTeatro.imprimirEnConsola();
+		for (ImprimibleEnConsola entrada : entradas) {
+			entrada.imprimirEnConsola();
+		}
 	}
 }

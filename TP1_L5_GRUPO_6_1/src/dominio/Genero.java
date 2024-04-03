@@ -1,17 +1,15 @@
 package dominio;
 
-public class Generos {
+public class Genero {
 	
-
-
 	private int nroGenero;
 	private String nombreGenero;
 	
 	private static int cont = 0;	
 	
-	public Generos(String nombreGenero) {
+	public Genero(String nombreGenero) {
 		super();
-		this.nroGenero = cont++;
+		this.nroGenero = ++cont;
 		this.nombreGenero = nombreGenero;
 	}
 	public int getNroGenero() {
