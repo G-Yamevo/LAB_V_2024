@@ -8,15 +8,27 @@ public abstract class Entrada {
 	private String hora;
 	private String tiempoDuracion;
 	protected float costo;
+	private static int cont=0;
+	//constructores
+	public Entrada() {
+		cont ++;
+		this.numeroUnico=cont;
+		this.nombreShow = " Ingrese el nombreShow";
+		this.dia = "Ingrese el dia";
+		this.hora = "Ingrese la hora";
+		this.tiempoDuracion = "Ingrese tiempoDuracion";
+	}
 	
-	
-	public Entrada(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion) {
-		this.numeroUnico = numeroUnico;
+	public Entrada( String nombreShow, String dia, String hora, String tiempoDuracion) {
+		cont ++;
+		this.numeroUnico = cont;
 		this.nombreShow = nombreShow;
 		this.dia = dia;
 		this.hora = hora;
 		this.tiempoDuracion = tiempoDuracion;
 	}
+	
+//Getters and Setters
 	public int getNumeroUnico() {
 		return numeroUnico;
 	}
