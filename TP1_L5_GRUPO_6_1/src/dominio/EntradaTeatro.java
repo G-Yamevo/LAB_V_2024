@@ -19,7 +19,7 @@ public class EntradaTeatro extends Entrada implements IGenero{
 		this.actorPrincipal1 = actorPrincipal1;
 		this.actorPrincipal2 = actorPrincipal2;
 		this.actorPrincipal3 = actorPrincipal3;
-		calcularCosto();
+		this.costo = calcularCosto();
 	}
 	
 //Getters and Setters

@@ -19,7 +19,7 @@ public class EntradaRecital extends Entrada implements IGenero{
 		this.bandaSoporte1 = bandaSoporte1;
 		this.bandaSoporte2 = bandaSoporte2;
 		this.esVip = esVip;
-		calcularCosto();
+		this.costo = calcularCosto();
 	}
 
 	public String getBanda() {

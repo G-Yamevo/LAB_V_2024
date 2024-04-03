@@ -10,6 +10,7 @@ public class EntradaInfantil extends Entrada {
 		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
 		this.souvenir = souvenir;
 		this.menor = menor;
+		this.costo = calcularCosto();
 	}
 
 	public boolean isSouvenir() {

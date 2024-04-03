@@ -24,5 +24,4 @@ public class Principal {
 		System.out.println(entradaTeatro.toString());
 		entradaTeatro.mostrarGenero();
 	}
-
 }
