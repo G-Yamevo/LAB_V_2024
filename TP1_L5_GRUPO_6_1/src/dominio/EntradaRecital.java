@@ -5,7 +5,7 @@ import interfaces.ImprimibleEnConsola;
 
 public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 	private String banda;
-	private String genero;
+	private Generos genero;
 	private String bandaSoporte1;
 	private String bandaSoporte2;
 	private boolean esVip;
@@ -13,7 +13,7 @@ public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 	private static final float VIP_COSTO = 1500;
 
 	public EntradaRecital(String nombreShow, String dia, String hora, String tiempoDuracion,
-			String banda, String genero, String bandaSoporte1, String bandaSoporte2, boolean esVip) {
+			String banda, Generos genero, String bandaSoporte1, String bandaSoporte2, boolean esVip) {
 		super(nombreShow, dia, hora, tiempoDuracion);
 		this.banda = banda;
 		this.genero = genero;
@@ -31,11 +31,11 @@ public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 		this.banda = banda;
 	}
 
-	public String getGenero() {
+	public Generos getGenero() {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
+	public void setGenero(Generos genero) {
 		this.genero = genero;
 	}
 
