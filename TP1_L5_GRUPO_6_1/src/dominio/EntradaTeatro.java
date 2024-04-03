@@ -12,14 +12,14 @@ public class EntradaTeatro extends Entrada implements IGenero{
 	private String actorPrincipal3;
 	
 	//Constructor
-	public EntradaTeatro(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion, 
+	public EntradaTeatro( String nombreShow, String dia, String hora, String tiempoDuracion, 
 			String genero, String actorPrincipal1, String actorPrincipal2,String actorPrincipal3) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, dia, hora, tiempoDuracion);
 		this.genero = genero;
 		this.actorPrincipal1 = actorPrincipal1;
 		this.actorPrincipal2 = actorPrincipal2;
 		this.actorPrincipal3 = actorPrincipal3;
-		calcularCosto();
+		this.costo = calcularCosto();
 	}
 	
 //Getters and Setters
@@ -64,8 +64,7 @@ public class EntradaTeatro extends Entrada implements IGenero{
 	
 	@Override
 	public String toString() {
-		return "Entrada de EntradaTeatro [GENERO:" + genero + ", ACTOR PRINCIPAL 1:" + actorPrincipal1 + ", ACTOR PRINCIPAL 2:" + actorPrincipal2 + ",ACTOR PRINCIPAL 3:" + actorPrincipal3 + ", NUMERO ENTRADA:"
-	            + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
+		return "Entrada de EntradaTeatro [NUMERO ENTRADA:"+ getNumeroUnico() + " GENERO:" + genero + ", ACTOR PRINCIPAL 1:" + actorPrincipal1 + ", ACTOR PRINCIPAL 2:" + actorPrincipal2 + ", ACTOR PRINCIPAL 3:" + actorPrincipal3 + ",  NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 	

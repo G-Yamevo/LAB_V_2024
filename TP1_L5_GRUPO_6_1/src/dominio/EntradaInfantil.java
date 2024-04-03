@@ -6,10 +6,11 @@ public class EntradaInfantil extends Entrada {
 	private static final float MENOR8_COSTO = 250;
 	private static final float MAYOR8_COSTO = 500;
 	
-	public EntradaInfantil(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion, boolean souvenir, boolean menor) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
+	public EntradaInfantil( String nombreShow, String dia, String hora, String tiempoDuracion, boolean souvenir, boolean menor) {
+		super( nombreShow, dia, hora, tiempoDuracion);
 		this.souvenir = souvenir;
 		this.menor = menor;
+		this.costo = calcularCosto();
 	}
 
 	public boolean isSouvenir() {
@@ -40,7 +41,7 @@ public class EntradaInfantil extends Entrada {
 
 	@Override
 	public String toString() {
-		return "Evento Infantil [SOUVENIR:" + souvenir + ", MENOR:" + menor + ", NUMERO ENTRADA:" + getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ",DIA:" + getDia() + ", HORARIO:"
+		return "Evento Infantil [NUMERO ENTRADA:"+ getNumeroUnico() +", SOUVENIR:" + souvenir + ", MENOR:" + menor +  ", NOMBRE DEL SHOW:" + getNombreShow() + ",DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 }

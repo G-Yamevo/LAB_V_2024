@@ -11,15 +11,15 @@ public class EntradaRecital extends Entrada implements IGenero{
 	private static final float NOVIP_COSTO = 800;
 	private static final float VIP_COSTO = 1500;
 
-	public EntradaRecital(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion,
+	public EntradaRecital( String nombreShow, String dia, String hora, String tiempoDuracion,
 			String banda, String genero, String bandaSoporte1, String bandaSoporte2, boolean esVip) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
+		super( nombreShow, dia, hora, tiempoDuracion);
 		this.banda = banda;
 		this.genero = genero;
 		this.bandaSoporte1 = bandaSoporte1;
 		this.bandaSoporte2 = bandaSoporte2;
 		this.esVip = esVip;
-		calcularCosto();
+		this.costo = calcularCosto();
 	}
 
 	public String getBanda() {
@@ -74,9 +74,8 @@ public class EntradaRecital extends Entrada implements IGenero{
 
 	@Override
 	public String toString() {
-		return "Entradas de Recitales [BANDA PRINCIPAL:" + banda + ", GENERO:" + genero + ", BANDA SOPORTE 1:" +
-	bandaSoporte1 + ", BANDA SOPORTE 2:" + bandaSoporte2 + ", VIP:" + esVip + ", NUMERO ENTRADA:"
-	            + getNumeroUnico() + ", NOMBRE DEL SHOW=" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
+		return "Entradas de Recitales [NUMERO ENTRADA:"+ getNumeroUnico() +", BANDA PRINCIPAL:" + banda + ", GENERO:" + genero + ", BANDA SOPORTE 1:" +
+	bandaSoporte1 + ", BANDA SOPORTE 2:" + bandaSoporte2 + ", VIP:" + esVip + ", NOMBRE DEL SHOW=" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION:" + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 

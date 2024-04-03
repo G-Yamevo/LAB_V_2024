@@ -9,12 +9,12 @@ public class EntradaDeporte extends Entrada {
 	private boolean esInternacional;
 	private String deporte;
 
-	public EntradaDeporte(int numeroUnico, String nombreShow, String dia, String hora, String tiempoDuracion,
+	public EntradaDeporte( String nombreShow, String dia, String hora, String tiempoDuracion,
 		 boolean esInternacional, String deporte) {
-		super(numeroUnico, nombreShow, dia, hora, tiempoDuracion);
+		super( nombreShow, dia, hora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
-		calcularCosto();
+		this.calcularCosto();
 	}
 
 	public boolean isEsInternacional() {
@@ -36,8 +36,8 @@ public class EntradaDeporte extends Entrada {
 
 	@Override
 	public String toString() {
-		return "Entrada de Deportes [INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + ", NUMERO ENTRADA:"
-				+ getNumeroUnico() + ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
+		return "Entrada de Deportes [NUMERO ENTRADA:"+ getNumeroUnico() +", INTERNACIONAL:" + esInternacional + ", DEPORTE:" + deporte + 
+			 ", NOMBRE DEL SHOW:" + getNombreShow() + ", DIA:" + getDia() + ", HORARIO:"
 				+ getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA:" + getCosto() + "]";
 	}
 	
