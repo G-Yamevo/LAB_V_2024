@@ -11,15 +11,6 @@ public abstract class Entrada {
 	private static int cont = 0;
 
 	// constructores
-	public Entrada() {
-		aumentarContador();
-		this.numeroUnico = cont;
-		this.nombreShow = " Ingrese el nombreShow";
-		this.dia = "Ingrese el dia";
-		this.hora = "Ingrese la hora";
-		this.tiempoDuracion = "Ingrese tiempoDuracion";
-	}
-
 	public Entrada(String nombreShow, String dia, String hora, String tiempoDuracion) {
 		aumentarContador();
 		this.numeroUnico = cont;
