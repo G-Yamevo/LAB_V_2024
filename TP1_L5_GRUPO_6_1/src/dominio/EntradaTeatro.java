@@ -2,19 +2,18 @@ package dominio;
 
 import interfaces.ImprimibleEnConsola;
 
-public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
+public class EntradaTeatro extends Entrada implements ImprimibleEnConsola {
 
+	// atributos
 
-	//atributos
-	
 	private Genero genero;
 	private String actorPrincipal1;
 	private String actorPrincipal2;
 	private String actorPrincipal3;
-	
-	//Constructor
-	public EntradaTeatro(String nombreShow, String dia, String hora, String tiempoDuracion, 
-			Genero genero, String actorPrincipal1, String actorPrincipal2,String actorPrincipal3) {
+
+	// Constructor
+	public EntradaTeatro(String nombreShow, String dia, String hora, String tiempoDuracion, Genero genero,
+			String actorPrincipal1, String actorPrincipal2, String actorPrincipal3) {
 		super(nombreShow, dia, hora, tiempoDuracion);
 		this.genero = genero;
 		this.actorPrincipal1 = actorPrincipal1;
@@ -22,10 +21,10 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 		this.actorPrincipal3 = actorPrincipal3;
 		this.costo = calcularCosto();
 	}
-	
-//Getters and Setters
-	
-  public Genero getGenero() {
+
+	// Getters and Setters
+
+	public Genero getGenero() {
 		return genero;
 	}
 
@@ -56,29 +55,29 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola{
 	public void setActorPrincipal3(String actorPrincipal3) {
 		this.actorPrincipal3 = actorPrincipal3;
 	}
-	//Metodo abstracto
+
+	// Metodo abstracto
 	@Override
 	public float calcularCosto() {
-	    
-	        return (float) 1350.50;
-	    }
-	
+
+		return (float) 1350.50;
+	}
+
 	@Override
 	public String toString() {
-		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", GENERO: " 
-	+ genero + ", ACTOR PRINCIPAL 1: " + actorPrincipal1 + ", ACTOR PRINCIPAL 2: " + actorPrincipal2 
-	+ ", ACTOR PRINCIPAL 3: " + actorPrincipal3 + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() 
-	+ ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
+		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", GENERO: " + genero
+				+ ", ACTOR PRINCIPAL 1: " + actorPrincipal1 + ", ACTOR PRINCIPAL 2: " + actorPrincipal2
+				+ ", ACTOR PRINCIPAL 3: " + actorPrincipal3 + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: "
+				+ getDia() + ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: "
+				+ getCosto();
 	}
-	
-	
+
 	@Override
 	public String obtenerTipoEntrada() {
-		return "TEATRO";	
-    }
+		return "TEATRO";
+	}
 
-	
-	//Interface method
+	// Interface method
 	@Override
 	public void imprimirEnConsola() {
 		System.out.println(this.toString());
