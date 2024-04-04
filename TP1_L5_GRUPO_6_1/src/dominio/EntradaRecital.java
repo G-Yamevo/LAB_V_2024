@@ -1,5 +1,7 @@
 package dominio;
 
+import java.time.LocalDateTime;
+
 import interfaces.ImprimibleEnConsola;
 
 
@@ -12,9 +14,9 @@ public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 	private static final float NOVIP_COSTO = 800;
 	private static final float VIP_COSTO = 1500;
 
-	public EntradaRecital(String nombreShow, String dia, String hora, String tiempoDuracion,
+	public EntradaRecital(String nombreShow, LocalDateTime fechaHora, String tiempoDuracion,
 			BandaRecitales banda, Genero genero, BandaRecitales bandaSoporte1, BandaRecitales bandaSoporte2, boolean esVip) {
-		super(nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, fechaHora, tiempoDuracion);
 		this.banda = banda;
 		this.genero = genero;
 		this.bandaSoporte1 = bandaSoporte1;
@@ -76,7 +78,7 @@ public class EntradaRecital extends Entrada implements ImprimibleEnConsola{
 	public String toString() {
 		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", BANDA PRINCIPAL: " 
 	+ banda.toString() + ", GENERO: " + genero + ", BANDA SOPORTE 1: " + bandaSoporte1.toString() + ", BANDA SOPORTE 2: " + bandaSoporte2.toString() 
-	+ ", VIP: " + ObtenerSiNo(esVip) + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() + ", HORARIO: " + getHora() 
+	+ ", VIP: " + ObtenerSiNo(esVip) + ", NOMBRE DEL SHOW: " + getNombreShow() + ", FECHA Y HORA: " + getFechaHora().toString() 
 	+ ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 

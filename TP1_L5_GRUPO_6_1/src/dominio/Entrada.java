@@ -1,22 +1,22 @@
 package dominio;
 
+import java.time.LocalDateTime;
+
 public abstract class Entrada {
 
 	private int numeroUnico;
 	private String nombreShow;
-	private String dia;
-	private String hora;
+	private LocalDateTime fechaHora;
 	private String tiempoDuracion;
 	protected float costo;
 	private static int cont = 0;
 
 	
-	public Entrada(String nombreShow, String dia, String hora, String tiempoDuracion) {
+	public Entrada(String nombreShow, LocalDateTime fechaHora, String tiempoDuracion) {
 		aumentarContador();
 		this.numeroUnico = cont;
 		this.nombreShow = nombreShow;
-		this.dia = dia;
-		this.hora = hora;
+		this.fechaHora = fechaHora;
 		this.tiempoDuracion = tiempoDuracion;
 	}
 
@@ -36,21 +36,13 @@ public abstract class Entrada {
 		this.nombreShow = nombreShow;
 	}
 
-	public String getDia() {
-		return dia;
-	}
+	public LocalDateTime getFechaHora() {
+        return fechaHora;
+    }
 
-	public void setDia(String dia) {
-		this.dia = dia;
-	}
-
-	public String getHora() {
-		return hora;
-	}
-
-	public void setHora(String hora) {
-		this.hora = hora;
-	}
+    public void setFechaHora(LocalDateTime fechaHora) {
+        this.fechaHora = fechaHora;
+    }
 
 	public String getTiempoDuracion() {
 		return tiempoDuracion;

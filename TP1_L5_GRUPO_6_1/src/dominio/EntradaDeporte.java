@@ -1,5 +1,7 @@
 package dominio;
 
+import java.time.LocalDateTime;
+
 import interfaces.ImprimibleEnConsola;
 
 public class EntradaDeporte extends Entrada implements ImprimibleEnConsola {
@@ -11,9 +13,9 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola {
 	private boolean esInternacional;
 	private Deporte deporte;
 
-	public EntradaDeporte(String nombreShow, String dia, String hora, String tiempoDuracion, boolean esInternacional,
+	public EntradaDeporte(String nombreShow, LocalDateTime fechaHora, String tiempoDuracion, boolean esInternacional,
 			Deporte deporte) {
-		super(nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, fechaHora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
 		this.costo = calcularCosto();
@@ -39,7 +41,7 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola {
 	public String toString() {
 		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada()
 				+ ", ES INTERNACIONAL: " + ObtenerSiNo(esInternacional) + ", DEPORTE: " + deporte.toString()
-				+ ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() + ", HORARIO: " + getHora()
+				+ ", NOMBRE DEL SHOW: " + getNombreShow() + ", FECHA Y HORA: " + getFechaHora().toString()
 				+ ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
 

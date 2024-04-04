@@ -1,5 +1,7 @@
 package dominio;
 
+import java.time.LocalDateTime;
+
 import interfaces.ImprimibleEnConsola;
 
 public class EntradaTeatro extends Entrada implements ImprimibleEnConsola {
@@ -12,9 +14,9 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola {
 	private String actorPrincipal3;
 
 	// Constructor
-	public EntradaTeatro(String nombreShow, String dia, String hora, String tiempoDuracion, Genero genero,
+	public EntradaTeatro(String nombreShow, LocalDateTime fechaHora, String tiempoDuracion, Genero genero,
 			String actorPrincipal1, String actorPrincipal2, String actorPrincipal3) {
-		super(nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, fechaHora, tiempoDuracion);
 		this.genero = genero;
 		this.actorPrincipal1 = actorPrincipal1;
 		this.actorPrincipal2 = actorPrincipal2;
@@ -67,8 +69,8 @@ public class EntradaTeatro extends Entrada implements ImprimibleEnConsola {
 	public String toString() {
 		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", GENERO: " + genero
 				+ ", ACTOR PRINCIPAL 1: " + actorPrincipal1 + ", ACTOR PRINCIPAL 2: " + actorPrincipal2
-				+ ", ACTOR PRINCIPAL 3: " + actorPrincipal3 + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: "
-				+ getDia() + ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: "
+				+ ", ACTOR PRINCIPAL 3: " + actorPrincipal3 + ", NOMBRE DEL SHOW: " + getNombreShow() + ", FECHA Y HORA: "
+				+ getFechaHora().toString() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: "
 				+ getCosto();
 	}
 

@@ -1,5 +1,7 @@
 package dominio;
 
+import java.time.LocalDateTime;
+
 import interfaces.ImprimibleEnConsola;
 
 public class EntradaInfantil extends Entrada implements ImprimibleEnConsola {
@@ -8,9 +10,9 @@ public class EntradaInfantil extends Entrada implements ImprimibleEnConsola {
 	private static final float MENOR8_COSTO = 250;
 	private static final float MAYOR8_COSTO = 500;
 
-	public EntradaInfantil(String nombreShow, String dia, String hora, String tiempoDuracion, boolean souvenir,
+	public EntradaInfantil(String nombreShow, LocalDateTime fechaHora, String tiempoDuracion, boolean souvenir,
 			boolean menor) {
-		super(nombreShow, dia, hora, tiempoDuracion);
+		super(nombreShow, fechaHora, tiempoDuracion);
 		this.souvenir = souvenir;
 		this.menor = menor;
 		this.costo = calcularCosto();
@@ -46,7 +48,7 @@ public class EntradaInfantil extends Entrada implements ImprimibleEnConsola {
 	public String toString() {
 		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", SOUVENIR: "
 				+ ObtenerSiNo(souvenir) + ", ES MENOR: " + ObtenerSiNo(menor) + ", NOMBRE DEL SHOW: " + getNombreShow()
-				+ ", DIA: " + getDia() + ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion()
+				+ ", FECHA Y HORA: " + getFechaHora().toString() + ", DURACION: " + getTiempoDuracion()
 				+ ", COSTO ENTRADA: " + getCosto();
 	}
 
