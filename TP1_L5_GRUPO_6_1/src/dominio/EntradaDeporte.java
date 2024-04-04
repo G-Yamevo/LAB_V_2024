@@ -2,7 +2,7 @@ package dominio;
 
 import interfaces.ImprimibleEnConsola;
 
-public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
+public class EntradaDeporte extends Entrada implements ImprimibleEnConsola {
 	private static final float RECARGO_INTERNACIONAL = (float) 1.3;
 	private static final float COSTO_FUTBOL = 300;
 	private static final float COSTO_RUGBY = 450;
@@ -11,8 +11,8 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 	private boolean esInternacional;
 	private Deporte deporte;
 
-	public EntradaDeporte(String nombreShow, String dia, String hora, String tiempoDuracion,
-		 boolean esInternacional, Deporte deporte) {
+	public EntradaDeporte(String nombreShow, String dia, String hora, String tiempoDuracion, boolean esInternacional,
+			Deporte deporte) {
 		super(nombreShow, dia, hora, tiempoDuracion);
 		this.esInternacional = esInternacional;
 		this.deporte = deporte;
@@ -37,12 +37,13 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 
 	@Override
 	public String toString() {
-		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada() + ", ES INTERNACIONAL: " 
-	+ ObtenerSiNo(esInternacional) + ", DEPORTE: " + deporte.toString() + ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() 
-	+ ", HORARIO: " + getHora() + ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
+		return "NUMERO DE ENTRADA: " + getNumeroUnico() + ", ENTRADA DE " + obtenerTipoEntrada()
+				+ ", ES INTERNACIONAL: " + ObtenerSiNo(esInternacional) + ", DEPORTE: " + deporte.toString()
+				+ ", NOMBRE DEL SHOW: " + getNombreShow() + ", DIA: " + getDia() + ", HORARIO: " + getHora()
+				+ ", DURACION: " + getTiempoDuracion() + ", COSTO ENTRADA: " + getCosto();
 	}
-	
-	//Metodo abstracto
+
+	// Metodo abstracto
 	@Override
 	public float calcularCosto() {
 		float precio = 0;
@@ -63,20 +64,20 @@ public class EntradaDeporte extends Entrada implements ImprimibleEnConsola{
 		if (esInternacional) {
 			precio *= RECARGO_INTERNACIONAL;
 		}
-		
+
 		return precio;
-		
+
 	}
-	
+
 	@Override
-    public String obtenerTipoEntrada() {
-		return "DEPORTE";	
-    }
+	public String obtenerTipoEntrada() {
+		return "DEPORTE";
+	}
+
 	
-	// Interface method
 	@Override
 	public void imprimirEnConsola() {
 		System.out.println(this.toString());
-		
+
 	}
 }

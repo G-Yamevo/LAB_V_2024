@@ -10,7 +10,7 @@ public abstract class Entrada {
 	protected float costo;
 	private static int cont = 0;
 
-	// constructores
+	
 	public Entrada(String nombreShow, String dia, String hora, String tiempoDuracion) {
 		aumentarContador();
 		this.numeroUnico = cont;
@@ -20,7 +20,6 @@ public abstract class Entrada {
 		this.tiempoDuracion = tiempoDuracion;
 	}
 
-	// Getters and Setters
 	public int getNumeroUnico() {
 		return numeroUnico;
 	}
