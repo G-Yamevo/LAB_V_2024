@@ -53,6 +53,7 @@ public class Principal {
 				generosTeatro.get(2), "Ricardo Darin", "Guillermo Francella", "Erica Rivas"));
 		for (ImprimibleEnConsola entrada : entradas) {
 			entrada.imprimirEnConsola();
+			
 		}
 	}
 }
